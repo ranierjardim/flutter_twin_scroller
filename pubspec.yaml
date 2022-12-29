@@ -1,7 +1,7 @@
 name: flutter_twin_scroller
 description: A Flutter package to sync scroll position between multiple ScrollControllers
 version: 0.0.1
-homepage:
+homepage: https://github.com/ranierjardim/flutter_twin_scroller
 
 environment:
   sdk: ">=2.16.2 <3.0.0"
