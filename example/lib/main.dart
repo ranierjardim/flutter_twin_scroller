@@ -89,14 +89,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 childScrollController: horizontalScrollController1,
                 child: Container(
                   height: 60,
-                  color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                  color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                      .withOpacity(0.3),
                   child: ListView.builder(
                     controller: horizontalScrollController1,
                     itemCount: _counter,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       return Container(
-                        color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                        color: Color(
+                                (math.Random().nextDouble() * 0xFFFFFF).toInt())
+                            .withOpacity(0.3),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
@@ -121,20 +124,26 @@ class _MyHomePageState extends State<MyHomePage> {
                         controller: verticalTwinScrollController,
                         childScrollController: verticalScrollController1,
                         child: Container(
-                          color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                          color: Color((math.Random().nextDouble() * 0xFFFFFF)
+                                  .toInt())
+                              .withOpacity(0.3),
                           child: ListView.builder(
                             controller: verticalScrollController1,
                             itemCount: _counter,
                             itemBuilder: (context, index) {
                               return Container(
-                                color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                                color: Color(
+                                        (math.Random().nextDouble() * 0xFFFFFF)
+                                            .toInt())
+                                    .withOpacity(0.3),
                                 child: Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Row(
                                     children: [
                                       Text(
                                         'Item: $index',
-                                        style: const TextStyle(color: Colors.black),
+                                        style: const TextStyle(
+                                            color: Colors.black),
                                       )
                                     ],
                                   ),
@@ -150,20 +159,26 @@ class _MyHomePageState extends State<MyHomePage> {
                         controller: verticalTwinScrollController,
                         childScrollController: verticalScrollController2,
                         child: Container(
-                          color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.1),
+                          color: Color((math.Random().nextDouble() * 0xFFFFFF)
+                                  .toInt())
+                              .withOpacity(0.1),
                           child: ListView.builder(
                             controller: verticalScrollController2,
                             itemCount: _counter,
                             itemBuilder: (context, index) {
                               return Container(
-                                color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                                color: Color(
+                                        (math.Random().nextDouble() * 0xFFFFFF)
+                                            .toInt())
+                                    .withOpacity(0.3),
                                 child: Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Row(
                                     children: [
                                       Text(
                                         'Item: $index',
-                                        style: const TextStyle(color: Colors.black),
+                                        style: const TextStyle(
+                                            color: Colors.black),
                                       )
                                     ],
                                   ),
@@ -186,14 +201,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 childScrollController: horizontalScrollController2,
                 child: Container(
                   height: 60,
-                  color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                  color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                      .withOpacity(0.3),
                   child: ListView.builder(
                     controller: horizontalScrollController2,
                     itemCount: _counter,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       return Container(
-                        color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                        color: Color(
+                                (math.Random().nextDouble() * 0xFFFFFF).toInt())
+                            .withOpacity(0.3),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
@@ -220,7 +238,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       Text(
                         '$_counter',
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headlineMedium,
                       ),
                     ],
                   ),
@@ -235,14 +253,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 childScrollController: horizontalScrollController3,
                 child: Container(
                   height: 60,
-                  color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                  color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                      .withOpacity(0.3),
                   child: ListView.builder(
                     controller: horizontalScrollController3,
                     itemCount: _counter,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       return Container(
-                        color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                        color: Color(
+                                (math.Random().nextDouble() * 0xFFFFFF).toInt())
+                            .withOpacity(0.3),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Row(
@@ -265,14 +286,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       MaterialButton(
-                        child: const Text('Open Multiple TwinScrollers Page', style: TextStyle(color: Colors.white),),
+                        child: const Text(
+                          'Open Multiple TwinScrollers Page',
+                          style: TextStyle(color: Colors.white),
+                        ),
                         color: Colors.blue,
                         onPressed: () {
                           horizontalTwinScrollController.holdPositions();
                           Navigator.of(context).push(
                             MaterialPageRoute(
                                 builder: (context) => ThreeTwinScrollerScreen(
-                                      horizontalTwinScrollController: horizontalTwinScrollController,
+                                      horizontalTwinScrollController:
+                                          horizontalTwinScrollController,
                                     )),
                           );
                         },
@@ -325,10 +350,13 @@ class _MyHomePageState extends State<MyHomePage> {
 class ThreeTwinScrollerScreen extends StatefulWidget {
   final TwinScrollController horizontalTwinScrollController;
 
-  const ThreeTwinScrollerScreen({Key? key, required this.horizontalTwinScrollController}) : super(key: key);
+  const ThreeTwinScrollerScreen(
+      {Key? key, required this.horizontalTwinScrollController})
+      : super(key: key);
 
   @override
-  State<ThreeTwinScrollerScreen> createState() => _ThreeTwinScrollerScreenState();
+  State<ThreeTwinScrollerScreen> createState() =>
+      _ThreeTwinScrollerScreenState();
 }
 
 class _ThreeTwinScrollerScreenState extends State<ThreeTwinScrollerScreen> {
@@ -354,14 +382,17 @@ class _ThreeTwinScrollerScreenState extends State<ThreeTwinScrollerScreen> {
             childScrollController: horizontalScrollController1,
             child: Container(
               height: 60,
-              color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+              color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                  .withOpacity(0.3),
               child: ListView.builder(
                 controller: horizontalScrollController1,
                 itemCount: _counter,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   return Container(
-                    color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                    color:
+                        Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                            .withOpacity(0.3),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
@@ -386,15 +417,20 @@ class _ThreeTwinScrollerScreenState extends State<ThreeTwinScrollerScreen> {
                     controller: verticalTwinScrollController,
                     childScrollController: verticalScrollController1,
                     child: Container(
-                      color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                      color:
+                          Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                              .withOpacity(0.3),
                       child: ListView.builder(
                         controller: verticalScrollController1,
                         itemCount: _counter,
                         itemBuilder: (context, index) {
                           return Container(
-                            color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                            color: Color((math.Random().nextDouble() * 0xFFFFFF)
+                                    .toInt())
+                                .withOpacity(0.3),
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 9.0, horizontal: 8.0),
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 9.0, horizontal: 8.0),
                               child: Row(
                                 children: [
                                   Text(
@@ -415,15 +451,20 @@ class _ThreeTwinScrollerScreenState extends State<ThreeTwinScrollerScreen> {
                     controller: verticalTwinScrollController,
                     childScrollController: verticalScrollController2,
                     child: Container(
-                      color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.1),
+                      color:
+                          Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                              .withOpacity(0.1),
                       child: ListView.builder(
                         controller: verticalScrollController2,
                         itemCount: _counter,
                         itemBuilder: (context, index) {
                           return Container(
-                            color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                            color: Color((math.Random().nextDouble() * 0xFFFFFF)
+                                    .toInt())
+                                .withOpacity(0.3),
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 8.0),
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 10.0, horizontal: 8.0),
                               child: Row(
                                 children: [
                                   Text(
@@ -444,15 +485,20 @@ class _ThreeTwinScrollerScreenState extends State<ThreeTwinScrollerScreen> {
                     controller: verticalTwinScrollController,
                     childScrollController: verticalScrollController3,
                     child: Container(
-                      color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.1),
+                      color:
+                          Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                              .withOpacity(0.1),
                       child: ListView.builder(
                         controller: verticalScrollController3,
                         itemCount: _counter,
                         itemBuilder: (context, index) {
                           return Container(
-                            color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                            color: Color((math.Random().nextDouble() * 0xFFFFFF)
+                                    .toInt())
+                                .withOpacity(0.3),
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 11.0, horizontal: 8.0),
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 11.0, horizontal: 8.0),
                               child: Row(
                                 children: [
                                   Text(
@@ -473,15 +519,20 @@ class _ThreeTwinScrollerScreenState extends State<ThreeTwinScrollerScreen> {
                     controller: verticalTwinScrollController,
                     childScrollController: verticalScrollController4,
                     child: Container(
-                      color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.1),
+                      color:
+                          Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                              .withOpacity(0.1),
                       child: ListView.builder(
                         controller: verticalScrollController4,
                         itemCount: _counter,
                         itemBuilder: (context, index) {
                           return Container(
-                            color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                            color: Color((math.Random().nextDouble() * 0xFFFFFF)
+                                    .toInt())
+                                .withOpacity(0.3),
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 8.0),
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 12.0, horizontal: 8.0),
                               child: Row(
                                 children: [
                                   Text(
@@ -502,15 +553,20 @@ class _ThreeTwinScrollerScreenState extends State<ThreeTwinScrollerScreen> {
                     controller: verticalTwinScrollController,
                     childScrollController: verticalScrollController5,
                     child: Container(
-                      color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.1),
+                      color:
+                          Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                              .withOpacity(0.1),
                       child: ListView.builder(
                         controller: verticalScrollController5,
                         itemCount: _counter,
                         itemBuilder: (context, index) {
                           return Container(
-                            color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(0.3),
+                            color: Color((math.Random().nextDouble() * 0xFFFFFF)
+                                    .toInt())
+                                .withOpacity(0.3),
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 13.0, horizontal: 8.0),
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 13.0, horizontal: 8.0),
                               child: Row(
                                 children: [
                                   Text(
