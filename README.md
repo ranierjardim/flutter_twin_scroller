@@ -1,4 +1,4 @@
-# Flutter TwinScroll
+# Flutter TwinScroller
 
 A Flutter package to sync scroll position between multiple ScrollControllers
 
